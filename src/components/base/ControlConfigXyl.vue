@@ -109,12 +109,13 @@
 </template>
 <script type="text/ecmascript-6">
   export default {
-    name: 'ControlConfigPyy',
+    name: 'ControlConfigXyl',
     props: ['config'],
-    created () {},
+    destroy () {
+      console.info(`destroy`)
+    },
     methods: {
       changeConfig () {
-        // console.info(this.config)
         this.$emit('changeConfig', this.config)
       },
       chooseIcon (item) {
